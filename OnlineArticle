@@ -1,0 +1,29 @@
+/**
+ * Prints Online Article.
+ *
+ * @author Alyson Futral.
+ * @version 11/9/2023
+ */
+
+public class OnlineArticle extends OnlineTextItem {
+    private int wordCount;
+
+    /**
+     * Constructor.
+     * @param nameIn used.
+     * @param priceIn used.
+     */
+    public OnlineArticle(String nameIn, double priceIn) {
+        super(nameIn, priceIn);
+        wordCount = 0;
+    }
+
+    /**
+     * Method.
+     * @param wordCountIn used.
+     * @return used.
+     */
+    public int setWordCount(int wordCountIn) {
+        return wordCountIn;
+    }
+}
