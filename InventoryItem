@@ -1,0 +1,55 @@
+/**
+ * Prints Inventory Items.
+ *
+ * @author Alyson Futral.
+ * @version 11/9/2023
+ */
+
+public class InventoryItem {
+
+    protected String name;
+    protected double price;
+    private static double taxRate = 0;
+
+    /**
+     * Constructor.
+     * @param nameIn used.
+     * @param priceIn used.
+     */
+    public InventoryItem(String nameIn, double priceIn) {
+        name = nameIn;
+        price = priceIn;
+    }
+
+    /**
+     * method.
+     * @return used.
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * method.
+     * @return used.
+     */
+    public double calculateCost() {
+        return price * (1 + taxRate);
+    }
+
+    /**
+     * method.
+     * @param taxRateIn used.
+     */
+    public static void setTaxRate(double taxRateIn) {
+        taxRate = taxRateIn;
+    }
+
+    /**
+     * method.
+     * @return used.
+     */
+    public String toString() {
+        return name + ": $" + calculateCost();
+    }
+}
