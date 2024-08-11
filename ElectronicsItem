@@ -1,0 +1,35 @@
+/**
+ * Prints Electronic Items.
+ *
+ * @author Alyson Futral.
+ * @version 11/9/2023
+ */
+public class ElectronicsItem extends InventoryItem {
+
+    protected double weight;
+
+    /**
+     * static.
+     *
+     */
+    public static final double SHIPPING_COST = 1.5;
+    
+    /**
+     * Constructor.
+     * @param nameIn used.
+     * @param priceIn used.
+     * @param weightIn used.
+     */
+    public ElectronicsItem(String nameIn, double priceIn, double weightIn) {
+        super(nameIn, priceIn);
+        weight = weightIn;
+    }
+
+    /**
+     * method.
+     * @return used.
+     */
+    public double calculateCost() {
+        return super.calculateCost() + (SHIPPING_COST * weight);
+    }
+}
