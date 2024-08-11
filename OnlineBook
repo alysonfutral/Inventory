@@ -1,0 +1,36 @@
+/**
+ * Prints Online Book.
+ *
+ * @author Alyson Futral.
+ * @version 11/9/2023
+ */
+
+public class OnlineBook extends OnlineTextItem {
+    protected String author;
+
+    /**
+     * Constructor.
+     * @param nameIn used.
+     * @param priceIn used.
+     */
+    public OnlineBook(String nameIn, double priceIn) {
+        super(nameIn, priceIn);
+        author = "Author Not Listed";
+    }
+
+    /**
+     * Method.
+     * @return used.
+     */
+    public String toString() {
+        return name + " - " + author + ": $" + calculateCost();
+    }
+
+    /**
+     * Method.
+     * @param authorIn used.
+     */
+    public void setAuthor(String authorIn) {
+        author = authorIn;
+    }
+}
