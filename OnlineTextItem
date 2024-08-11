@@ -1,0 +1,26 @@
+/**
+ * Prints Online Text Items.
+ *
+ * @author Alyson Futral.
+ * @version 11/9/2023
+ */
+
+public abstract class OnlineTextItem extends InventoryItem {
+
+    /**
+     * Constructor.
+     * @param nameIn used.
+     * @param priceIn used.
+     */
+    public OnlineTextItem(String nameIn, double priceIn) {
+        super(nameIn, priceIn);
+    }
+
+    /**
+     * Method.
+     * @return used.
+     */
+    public double calculateCost() {
+        return price;
+    }
+}
